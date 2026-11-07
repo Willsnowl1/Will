@@ -3,69 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ff6b5e">
+<meta name="theme-color" content="#f7f3eb">
 <title>Tip Toey Joey | Smart Contact</title>
 <style>
-:root{--coral:#ff6b5e;--yellow:#ffd65a;--blue:#6bc8df;--green:#78c7a0;--ink:#243a36;--cream:#fff9ed}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-.wrap{max-width:520px;margin:auto;min-height:100vh;background:#fffdf8;overflow:hidden;box-shadow:0 0 40px #243a3612}
-.hero{padding:26px 22px 30px;background:linear-gradient(145deg,#ff796b,#ffb66b);border-radius:0 0 34px 34px;position:relative;overflow:hidden}
-.top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
-.logo{font-weight:900;letter-spacing:1.5px;font-size:20px;color:white}.tag{font-size:10px;font-weight:800;letter-spacing:1px;background:#fff8;padding:8px 11px;border-radius:20px;color:#7d443a}
-.hero h1{font-size:34px;line-height:1.03;margin:35px 0 10px;max-width:330px;color:#fff;font-weight:900;position:relative;z-index:1}
-.hero p{font-size:14px;line-height:1.5;color:#fff9f4;max-width:300px;margin:0;position:relative;z-index:1}
-.doodle{font-size:54px;position:absolute;right:24px;bottom:22px;transform:rotate(12deg)}
-main{padding:22px 18px 30px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.4px;color:#f06b5f;text-transform:uppercase;margin:4px 0 8px}
-h2{font-size:22px;margin:0 0 14px;letter-spacing:-.5px}.menu{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:28px}
-.menu a{text-decoration:none;color:var(--ink);padding:15px 13px;border-radius:19px;min-height:112px;display:flex;flex-direction:column;justify-content:space-between;font-weight:800;font-size:14px;box-shadow:0 4px 14px #243a360c}
-.menu a span{font-size:25px}.menu a small{font-size:11px;font-weight:500;opacity:.8;line-height:1.3;margin-top:5px}
-.m1{background:#dff3e8}.m2{background:#fff0bd}.m3{background:#dff2fa}.m4{background:#ffe1dc}
-.products-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:13px}.products-head a{font-size:12px;color:#e45e53;font-weight:800;text-decoration:none}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:12px}.product{border:1px solid #f0ece2;border-radius:19px;overflow:hidden;background:white}
-.art{height:132px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative}.art:after{content:"";position:absolute;width:112px;height:46px;border-radius:50%;background:#243a3610;bottom:17px;filter:blur(6px)}
-.art span{position:relative;z-index:1;transform:rotate(-12deg)}.a1{background:#e2f3e8}.a2{background:#fff0bf}.a3{background:#dff2fa}.a4{background:#ffe3de}
-.pinfo{padding:12px}.pinfo strong{font-size:13px;display:block}.pinfo small{font-size:11px;color:#77817d;display:block;margin-top:5px;line-height:1.35}
-.pill{display:inline-block;margin-top:9px;font-size:10px;font-weight:800;background:#f5f1e8;border-radius:20px;padding:6px 8px}
-.cta{margin-top:24px;padding:18px;border-radius:22px;background:#263e37;color:white}.cta h3{font-size:20px;margin:0 0 7px}.cta p{font-size:12px;line-height:1.5;color:#e0ebe5;margin:0 0 14px}
-.cta a{display:block;background:#ffd65a;color:#263e37;text-align:center;text-decoration:none;font-weight:900;padding:13px;border-radius:13px;font-size:13px}
-footer{text-align:center;padding:20px 10px 28px;font-size:10px;color:#89938e;letter-spacing:1px}.note{font-size:10px;color:#929b96;line-height:1.4;text-align:center;margin:12px 0 0}
-@media(min-width:560px){body{padding:24px 0}.wrap{border-radius:28px;min-height:0}}
+:root{--ink:#202d2b;--muted:#68736e;--cream:#f7f4ed;--paper:#fff;--coral:#ee765f;--green:#dce9df;--line:#e9e5dc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}.wrap{max-width:560px;margin:auto;min-height:100vh;background:var(--paper);overflow:hidden;box-shadow:0 8px 40px #202d2b12}
+.hero{padding:25px 22px 28px;background:#e9eee7;position:relative;overflow:hidden}.top{display:flex;justify-content:space-between;align-items:center}.logo{font-size:19px;font-weight:900;letter-spacing:1px}.tag{font-size:9px;letter-spacing:1.5px;font-weight:800;color:#5f6e65;border:1px solid #cbd7cb;border-radius:30px;padding:8px 11px}
+.hero-copy{padding:40px 0 25px;max-width:340px}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:800;color:var(--coral);text-transform:uppercase;margin:0 0 11px}.hero h1{font-size:38px;line-height:1.02;letter-spacing:-1.5px;margin:0 0 13px;font-weight:800}.hero p{font-size:14px;line-height:1.6;color:#53615a;margin:0;max-width:310px}.hero-art{display:flex;justify-content:center;align-items:center;background:#fff;border-radius:20px;overflow:hidden;aspect-ratio:1.7/1}.hero-art img{width:100%;height:100%;object-fit:contain}
+main{padding:25px 18px 30px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px}.action{min-height:78px;padding:15px;border-radius:15px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:5px;background:#f3f1eb;border:1px solid var(--line)}.action.primary{background:var(--ink);color:#fff;border-color:var(--ink)}.action b{font-size:14px}.action small{font-size:11px;opacity:.72}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}.section-head h2{font-size:24px;letter-spacing:-.7px;margin:0}.section-head a{font-size:11px;font-weight:800;color:var(--coral);text-decoration:none}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:12px}.product{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#fff}.photo{background:#faf9f6;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}.photo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}.info{padding:12px}.info strong{display:block;font-size:13px}.info small{display:block;color:var(--muted);font-size:11px;line-height:1.4;margin-top:5px}
+.story{margin-top:28px;background:#f3f5f0;border-radius:19px;padding:20px}.story h3{font-size:21px;margin:0 0 8px}.story p{font-size:12px;line-height:1.6;color:#5c6961;margin:0 0 15px}.story a{display:inline-block;color:var(--ink);font-size:11px;font-weight:800;text-decoration:none;border-bottom:1px solid var(--coral);padding-bottom:4px}
+.contact{margin-top:13px;background:#f6e9e3;border-radius:19px;padding:20px}.contact h3{font-size:20px;margin:0 0 7px}.contact p{font-size:12px;line-height:1.5;color:#665c57;margin:0 0 14px}.contact a{display:block;background:var(--coral);color:#fff;text-align:center;text-decoration:none;font-weight:800;padding:14px;border-radius:12px;font-size:12px;letter-spacing:.4px}
+footer{text-align:center;padding:22px 10px 28px;color:#89928c;font-size:9px;letter-spacing:1.3px}
+@media(min-width:600px){body{padding:24px 0}.wrap{border-radius:25px}}
 </style>
 </head>
-<body>
-<div class="wrap">
+<body><div class="wrap">
 <header class="hero">
 <div class="top"><div class="logo">tip toey joey</div><div class="tag">SMART CONTACT</div></div>
-<h1>Pequenos pés.<br>Grandes descobertas.</h1>
-<p>Um mundo de possibilidades para os primeiros passos. Explore, conheça e venha conversar com a gente!</p>
-<div class="doodle" aria-hidden="true">👣</div>
+<div class="hero-copy"><div class="eyebrow">Growing together</div><h1>Pequenos pés.<br>Grandes descobertas.</h1><p>Calçados barefoot criados para acompanhar cada fase da infância, respeitando o movimento natural dos pezinhos.</p></div>
+<div class="hero-art"><img src="https://tiptoeyjoey.vtexassets.com/arquivos/ids/386227-600-auto?aspect=true&height=600&v=639177534837100000&width=600" alt="Calçado infantil Tip Toey Joey"></div>
 </header>
 <main>
-<div class="eyebrow">Vamos nos conectar</div>
-<h2>O que você procura?</h2>
-<nav class="menu" aria-label="Menu principal">
-<a class="m1" href="https://www.brandboom.com/app/a/068DFE47122" target="_blank" rel="noopener"><span>🛍️</span><div>Catálogo<small>Explore nossas coleções</small></div></a>
-<a class="m2" href="https://wa.me/5516994547697?text=Ol%C3%A1!%20Quero%20conhecer%20melhor%20a%20Tip%20Toey%20Joey." target="_blank" rel="noopener"><span>💬</span><div>Fale com a gente<small>Atendimento comercial</small></div></a>
-<a class="m3" href="#marca"><span>🌱</span><div>Nossa marca<small>Conheça nossa essência</small></div></a>
-<a class="m4" href="https://www.instagram.com/tiptoeyjoey/" target="_blank" rel="noopener"><span>📸</span><div>Instagram<small>Veja nosso universo</small></div></a>
+<nav class="actions" aria-label="Ações principais">
+<a class="action primary" href="https://www.brandboom.com/app/a/068DFE47122" target="_blank" rel="noopener"><b>Explorar catálogo ↗</b><small>Conheça a coleção completa</small></a>
+<a class="action" href="https://wa.me/5516994547697?text=Ol%C3%A1!%20Quero%20conhecer%20melhor%20a%20Tip%20Toey%20Joey." target="_blank" rel="noopener"><b>Falar com nosso time ↗</b><small>Atendimento comercial</small></a>
 </nav>
 <section id="colecoes">
-<div class="products-head"><div><div class="eyebrow">Feitos para explorar</div><h2>Conheça nossos estilos</h2></div><a href="https://www.brandboom.com/app/a/068DFE47122" target="_blank" rel="noopener">Ver catálogo ↗</a></div>
+<div class="section-head"><div><div class="eyebrow">Feitos para explorar</div><h2>Um mundo de possibilidades</h2></div><a href="https://www.brandboom.com/app/a/068DFE47122" target="_blank" rel="noopener">VER CATÁLOGO ↗</a></div>
 <div class="products">
-<article class="product"><div class="art a1"><span>👟</span></div><div class="pinfo"><strong>Primeiros passos</strong><small>Liberdade e conforto para descobrir o mundo.</small><div class="pill">BAREFOOT</div></div></article>
-<article class="product"><div class="art a2"><span>🧸</span></div><div class="pinfo"><strong>Para cada aventura</strong><small>Estilo e praticidade para acompanhar os pequenos.</small><div class="pill">COLEÇÃO</div></div></article>
-<article class="product"><div class="art a3"><span>🥿</span></div><div class="pinfo"><strong>Leves e flexíveis</strong><small>Design pensado para acompanhar o movimento.</small><div class="pill">CONFORTO</div></div></article>
-<article class="product"><div class="art a4"><span>🌈</span></div><div class="pinfo"><strong>Novas descobertas</strong><small>Modelos para diferentes momentos da infância.</small><div class="pill">DESCOBRIR</div></div></article>
+<article class="product"><div class="photo"><img src="https://tiptoeyjoey.vtexassets.com/arquivos/ids/386227-600-auto?aspect=true&height=600&v=639177534837100000&width=600" alt="Tip Toey Joey Funky Colors"></div><div class="info"><strong>Nascer e Crescer</strong><small>Conforto e liberdade desde os primeiros movimentos.</small></div></article>
+<article class="product"><div class="photo"><img src="https://tiptoeyjoey.vtexassets.com/arquivos/ids/386228-600-auto?aspect=true&height=600&v=639177534837270000&width=600" alt="Calçado infantil Tip Toey Joey"></div><div class="info"><strong>Andar e Equilibrar</strong><small>Espaço para os dedinhos explorarem cada passo.</small></div></article>
+<article class="product"><div class="photo"><img src="https://tiptoeyjoey.vtexassets.com/arquivos/ids/386229-600-auto?aspect=true&height=600&v=639177534837270000&width=600" alt="Detalhe de calçado Tip Toey Joey"></div><div class="info"><strong>Correr e Brincar</strong><small>Leveza e flexibilidade para acompanhar a aventura.</small></div></article>
+<article class="product"><div class="photo"><img src="https://tiptoeyjoey.vtexassets.com/arquivos/ids/386230-600-auto?aspect=true&height=600&v=639177534837270000&width=600" alt="Coleção Tip Toey Joey"></div><div class="info"><strong>Dedinhos livres</strong><small>Design barefoot que respeita o formato natural dos pés.</small></div></article>
 </div>
-<p class="note">Cards ilustrativos para demonstração. Não representam produtos ou disponibilidade de estoque.</p>
 </section>
-<section id="marca" class="cta">
-<h3>Vamos crescer juntos?</h3>
-<p>Quer conhecer melhor a Tip Toey Joey ou conversar sobre uma oportunidade comercial? Estamos por aqui.</p>
-<a href="https://wa.me/5516994547697?text=Ol%C3%A1!%20Tenho%20interesse%20em%20conhecer%20as%20oportunidades%20comerciais%20da%20Tip%20Toey%20Joey." target="_blank" rel="noopener">CONVERSAR COM NOSSO TIME</a>
-</section>
-</main>
-<footer>TIP TOEY JOEY · FEITO NO BRASIL COM CARINHO</footer>
-</div>
-</body>
-</html>
+<section class="story"><div class="eyebrow">Nossa essência</div><h3>Melhor, só descalço.</h3><p>Conheça a filosofia barefoot da Tip Toey Joey e descubra como cada detalhe é pensado para deixar os pezinhos livres para crescer, sentir e explorar.</p><a href="https://br.tiptoeyjoey.com/" target="_blank" rel="noopener">CONHEÇA A MARCA ↗</a></section>
+<section class="contact"><h3>Vamos crescer juntos?</h3><p>Quer conhecer nossas coleções ou conversar sobre uma oportunidade comercial? Estamos por aqui.</p><a href="https://wa.me/5516994547697?text=Ol%C3%A1!%20Tenho%20interesse%20em%20conhecer%20as%20oportunidades%20comerciais%20da%20Tip%20Toey%20Joey." target="_blank" rel="noopener">CONVERSAR COM NOSSO TIME</a></section>
+</main><footer>TIP TOEY JOEY · FEITO NO BRASIL COM CARINHO</footer></div></body></html>
